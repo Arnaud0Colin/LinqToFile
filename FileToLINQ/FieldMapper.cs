@@ -46,8 +46,11 @@ namespace LinqToFile
             var listMember = typeof(T).GetMembers(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static)
                 .Where(m => (m.MemberType == MemberTypes.Field) || (m.MemberType == MemberTypes.Property));
 
-            if (fileDescription.EnforceAllField && ListOfAttribute.All(p => listMember.Any(v => v.Name == p.Property)))
-                throw new Exception("EnforceCsvColumnAttribute is true, but some Menbers don't get FileColumn");
+            IEnumerable<string> MissingAttr = listMember.Select(m => m.Name).Except(ListOfAttribute.Select(p => p.Property)); 
+
+            //if (fileDescription.EnforceAllField && !ListOfAttribute.All(p => listMember.Any(v => v.Name == p.Property)))
+                if (fileDescription.EnforceAllField && MissingAttr.Any())
+                    throw new Exception("EnforceCsvColumnAttribute is true, but some Menbers don't get FileColumn");
 
             foreach (FileColumnAttribute mi in ListOfAttribute)
             {
@@ -133,12 +136,7 @@ namespace LinqToFile
         {
             row.Clear();
             row = m_Array.Select(col => col.Name).ToList();
-                
-              //  m_ListColumn.OrderBy(p => p.FieldIndex).Select(col => col.Name).ToList();
         }
-
-
-
       
 
         /// ///////////////////////////////////////////////////////////////////////
@@ -150,10 +148,7 @@ namespace LinqToFile
 
             foreach (var col in m_Array)
             {
-
                 Object objValue = null;
-
-
                 if (col.MemberInfo != null)
                 {
                     if (col.MemberInfo is PropertyInfo)
@@ -200,7 +195,6 @@ namespace LinqToFile
 
        private string ConvertObject(FileColumnAttribute col, Object objValue)
        {
-            
 
            string resultString = null;
            if (objValue != null)

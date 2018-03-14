@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileToLINQ", "FileToLINQ.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileToLINQ35", "FileToLINQ35.csproj", "{AC3EB634-5D75-4E8F-A5DC-CF4C74F6BC69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinTest", "..\WinTest\WinTest.csproj", "{FDAEEA1B-0974-479D-B40C-C4BB62803258}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AC3EB634-5D75-4E8F-A5DC-CF4C74F6BC69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC3EB634-5D75-4E8F-A5DC-CF4C74F6BC69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC3EB634-5D75-4E8F-A5DC-CF4C74F6BC69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDAEEA1B-0974-479D-B40C-C4BB62803258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDAEEA1B-0974-479D-B40C-C4BB62803258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDAEEA1B-0974-479D-B40C-C4BB62803258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDAEEA1B-0974-479D-B40C-C4BB62803258}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

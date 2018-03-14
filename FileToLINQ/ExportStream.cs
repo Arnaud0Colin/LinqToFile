@@ -29,7 +29,6 @@ namespace LinqToFile
                     // If user always wants quoting, or if the item has special chars
                     // (such as "), or if item is the empty string or consists solely of
                     // white space, surround the item with quotes.
-
                     if ( m_fileDescription.SeparatorChar != null &&
                         (m_fileDescription.QuoteAllFields ||
                         (item.IndexOfAny(m_SpecialChars) > -1) ||

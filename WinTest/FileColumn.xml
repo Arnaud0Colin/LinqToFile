@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Tables>
+  <Table Name="Company">
+      <Field Property='"Account_Code"' MaxLength='6' FillChar="'0'" UsePropertyAsName="true" />
+      <Field Property='"A"' MaxLength='9' FillChar="' '" UsePropertyAsName="true"  />
+      <Field Property='"B"' MaxLength='9' FillChar="' '" UsePropertyAsName="true"  />
+      <Field Property='"C"' MaxLength='9' FillChar="' '" UsePropertyAsName="true"  /> 
+  </Table>
+ <Table Name="Remise">
+    <Field  Property='"Code_Article"' MaxLength='5' UsePropertyAsName="true"  />
+    <Field  Property='"Code_CSP"' MaxLength='2' UsePropertyAsName="true" />
+    <Field  Property='"Pourcent"' OutputFormat = '"00.000"' UsePropertyAsName="true"  />
+    <Field  Property='"Date_Application"' MaxLength='8' OutputFormat = '"yyyyMMdd"' UsePropertyAsName="true" />
+    <Field  Property='"Date_Fin"' MaxLength='8' OutputFormat = '"yyyyMMdd"' UsePropertyAsName="true" />
+  </Table>
+  </Tables>
